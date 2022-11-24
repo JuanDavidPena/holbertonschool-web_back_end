@@ -1,21 +1,7 @@
-export default function getListStudents() {
-  const lst = [
-    {
-      id: 1,
-      firstName: 'Guillaume',
-      location: 'San Francisco',
-    },
-    {
-      id: 2,
-      firstName: 'James',
-      location: 'Columbia',
-    },
-    {
-      id: 5,
-      firstName: 'Serena',
-      location: 'San Francisco',
-    },
-  ];
-
-  return lst;
+export default function getListStudentIds(listofObjs) {
+  if (Array.isArray(listofObjs) === false) {
+    return [];
+  }
+  const ids = listofObjs.map((x) => x.id);
+  return ids;
 }
